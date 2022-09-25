@@ -8,3 +8,6 @@ data/*
 **/__pycache__
 .idea
 error_log.txt
+build
+dist
+trackeval.egg-info
