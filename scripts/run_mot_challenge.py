@@ -29,6 +29,13 @@ Command Line Arguments: Defaults, # Comments
         'DO_PREPROC': True,  # Whether to perform preprocessing (never done for 2D_MOT_2015)
         'TRACKER_SUB_FOLDER': 'data',  # Tracker files are in TRACKER_FOLDER/tracker_name/TRACKER_SUB_FOLDER
         'OUTPUT_SUB_FOLDER': '',  # Output files are saved in OUTPUT_FOLDER/tracker_name/OUTPUT_SUB_FOLDER
+        'SEQMAP_FOLDER': None,  # Where seqmaps are found (if None, GT_FOLDER/seqmaps)
+        'SEQMAP_FILE': None,  # Directly specify seqmap file (if none use seqmap_folder/benchmark-split_to_eval)
+        'SEQ_INFO': None,  # If not None, directly specify sequences to eval and their number of timesteps
+        'GT_LOC_FORMAT': '{gt_folder}/{seq}/gt/gt.txt',  # '{gt_folder}/{seq}/gt/gt.txt'
+        'SKIP_SPLIT_FOL': False,  # If False, data is in GT_FOLDER/BENCHMARK-SPLIT_TO_EVAL/ and in
+                                  # TRACKERS_FOLDER/BENCHMARK-SPLIT_TO_EVAL/tracker/
+                                  # If True, then the middle 'benchmark-split' folder is skipped for both.
     Metric arguments:
         'METRICS': ['HOTA', 'CLEAR', 'Identity', 'VACE']
 """
